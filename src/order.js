@@ -25,13 +25,12 @@ function listItems(deliveries) {
 }
 
 function searchOrder(deliveryOrders, food) {
-  var isOrdered = false;
   for (var i = 0; i < deliveryOrders.length; i++) {
     if (deliveryOrders[i].item === food) {
       isOrdered = true;
     }
   }
-  return isOrdered;
+  return false;
 }
 
 module.exports = {
