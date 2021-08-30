@@ -11,24 +11,15 @@ function createRestaurant(restaurantName) {
 }
 
 function addMenuItem(restaurant, food) {
-  var restaurantLunch = restaurant.menus.lunch;
-  var restaurantBreakfast = restaurant.menus.breakfast;
-  var restaurantDinner = restaurant.menus.dinner;
+  var restaurant = restaurant.menus;
 
-  if (food.type === "lunch" && !restaurantLunch.includes(food)) {
-    return restaurantLunch.push(food);
-  }else if (food.type === "breakfast" && !restaurantBreakfast.includes(food)) {
-    return restaurantBreakfast.push(food);
-  }else if (food.type === "dinner" && !restaurantDinner.includes(food)) {
-    return restaurantDinner.push(food);
+  if (food.type === "lunch" && !restaurant.lunch.includes(food)) {
+    return restaurant.lunch.push(food);
+  }else if (food.type === "breakfast" && !restaurant.breakfast.includes(food)) {
+    return restaurant.breakfast.push(food);
+  }else if (food.type === "dinner" && !restaurant.dinner.includes(food)) {
+    return restaurant.dinner.push(food);
   }
-  // var restaurant = restaurant.menus;
-  //
-  // for (var i = 0; i < restaurant[food.type].length; i++) {
-  //   if (food.type === restaurant[food.type][i] && !restaurant[food.type][i].includes(food)) {
-  //     return restaurant[food.type].push(food);
-  //   }
-  // }
 }
 
 function removeMenuItem(restaurant, food, meal) {
